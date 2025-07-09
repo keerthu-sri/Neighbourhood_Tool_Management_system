@@ -18,20 +18,6 @@ A full-stack Django + React (TypeScript) web-app for neighbors to **lend, borrow
 - Custom User Model (email-based login)
 - SQLite (dev) or PostgreSQL/MySQL (prod)
 
-Neighbourhood_Tool_Management_System/
-├── backend/ # Django Backend
-│ ├── apps/ # Users, Tools, Requests apps
-│ ├── toolshare/ # Settings and URLs
-│ ├── media/ # Uploaded files
-│ ├── manage.py
-│ └── requirements.txt
-├── frontend/ # React Frontend
-│ ├── src/
-│ ├── public/
-│ ├── vite.config.ts
-│ └── .env
-└── README.md
-
 🛠️ Getting Started
 
 🔹 1. Clone the Repo
@@ -48,7 +34,7 @@ npm run dev
 
 🌐 Frontend .env.example
 env
-# Base URL of the backend server (local or production)
+Base URL of the backend server (local or production)
 VITE_API_BASE_URL=http://localhost:8000/api
 
 ⚙️ Backend Setup (Django + DRF)
@@ -67,30 +53,27 @@ python manage.py createsuperuser
 python manage.py runserver
 
 
- Backend .env.example (Optional for prod)
-env
-Copy
-Edit
-# Django secret key
+---Backend .env.example (Optional for prod):
+- Django secret key
 SECRET_KEY=your-secret-key
 
-# Debug mode
+- Debug mode
 DEBUG=True
 
-# Allowed hosts
+- Allowed hosts
 ALLOWED_HOSTS=localhost,127.0.0.1
 
-# Database (default is SQLite, use for dev)
+- Database (default is SQLite, use for dev)
 DB_ENGINE=django.db.backends.sqlite3
 DB_NAME=db.sqlite3
 
-# Use this if deploying with PostgreSQL or MySQL
-# DB_ENGINE=django.db.backends.postgresql
-# DB_NAME=your-db-name
-# DB_USER=your-db-user
-# DB_PASSWORD=your-db-password
-# DB_HOST=your-db-host
-# DB_PORT=5432
+#Use this if deploying with PostgreSQL or MySQL
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=your-db-name
+DB_USER=your-db-user
+DB_PASSWORD=your-db-password
+DB_HOST=your-db-host
+DB_PORT=5432
 
 🧪 Testing API (Optional)
 Once backend is running, test endpoints like:
